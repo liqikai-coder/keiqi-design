@@ -1,0 +1,11 @@
+# Cloudflare Pages 配置（可选）
+# 推荐用 Git 集成：在 Cloudflare Pages 后台连接本仓库，
+# 「构建设置」选 Framework preset = Next.js，根目录 = web，
+# 构建命令 = npx @cloudflare/next-on-pages，自动识别输出目录。
+#
+# 如需 wrangler 本地/CLI 部署，先安装：npm i -D wrangler @cloudflare/next-on-pages
+# 再执行：cd web && npx @cloudflare/next-on-pages && wrangler pages deploy .vercel/output/public
+
+name = "keiqi-design-os"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = ".vercel/output/public"

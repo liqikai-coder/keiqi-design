@@ -1,0 +1,8 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="凯奇 KQ 几何组合徽标">
+  <rect width="200" height="200" rx="16" fill="#F8F5F0"/>
+  <!-- 几何 K：右三角 -->
+  <path d="M64 60 L64 140 L96 140 L96 112 L80 112 L80 88 L96 88 L96 60 Z" fill="#111111"/>
+  <!-- 几何 Q：圆环 + 红点 -->
+  <circle cx="128" cy="100" r="34" stroke="#111111" stroke-width="9" fill="none"/>
+  <circle cx="146" cy="118" r="7" fill="#C1121F"/>
+</svg>

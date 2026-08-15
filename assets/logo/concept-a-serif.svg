@@ -1,0 +1,14 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="凯奇 KQ 衬线字母标">
+  <rect width="200" height="200" rx="16" fill="#F8F5F0"/>
+  <!-- K -->
+  <g stroke="#111111" stroke-width="9" stroke-linecap="round" fill="none">
+    <line x1="46" y1="56" x2="46" y2="144"/>
+    <line x1="46" y1="100" x2="86" y2="56"/>
+    <line x1="46" y1="100" x2="86" y2="144"/>
+  </g>
+  <!-- Q -->
+  <g stroke="#111111" stroke-width="9" fill="none">
+    <circle cx="128" cy="100" r="36"/>
+  </g>
+  <line x1="150" y1="122" x2="172" y2="150" stroke="#C1121F" stroke-width="9" stroke-linecap="round"/>
+</svg>

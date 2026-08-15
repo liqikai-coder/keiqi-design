@@ -1,0 +1,16 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="凯奇 KQ 圆形印章徽标">
+  <rect width="200" height="200" rx="16" fill="#111111"/>
+  <circle cx="100" cy="100" r="64" stroke="#C1121F" stroke-width="6" fill="none"/>
+  <circle cx="100" cy="100" r="54" stroke="#F8F5F0" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <!-- K -->
+  <g stroke="#F8F5F0" stroke-width="8" stroke-linecap="round" fill="none">
+    <line x1="74" y1="74" x2="74" y2="126"/>
+    <line x1="74" y1="100" x2="100" y2="74"/>
+    <line x1="74" y1="100" x2="100" y2="126"/>
+  </g>
+  <!-- Q -->
+  <g stroke="#F8F5F0" stroke-width="8" fill="none">
+    <circle cx="124" cy="100" r="22"/>
+  </g>
+  <line x1="139" y1="115" x2="152" y2="132" stroke="#C1121F" stroke-width="8" stroke-linecap="round"/>
+</svg>
