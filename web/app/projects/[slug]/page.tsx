@@ -7,8 +7,13 @@ export function generateStaticParams() {
   return PROJECTS.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const project = getProject(params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const project = getProject(slug);
   if (!project) return { title: "案例未找到" };
   return {
     title: project.name,
@@ -16,8 +21,13 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const project = getProject(params.slug);
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const project = getProject(slug);
   if (!project) notFound();
 
   const related = PROJECTS.filter(
