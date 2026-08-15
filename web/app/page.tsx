@@ -1,18 +1,24 @@
 import { Hero } from "@/components/sections/hero";
-import { Services } from "@/components/sections/services";
-import { Projects } from "@/components/sections/projects";
 import { Philosophy } from "@/components/sections/philosophy";
-import { Stats } from "@/components/sections/stats";
+import { ServiceDomains } from "@/components/sections/service-domains";
+import { DesignSystem } from "@/components/sections/design-system";
+import { Craftsmanship } from "@/components/sections/craftsmanship";
+import { HealthyHome } from "@/components/sections/healthy-home";
+import { JapaneseLiving } from "@/components/sections/japanese-living";
+import { AiAdvisor } from "@/components/sections/ai-advisor";
 import { Cta } from "@/components/sections/cta";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Services />
-      <Projects />
       <Philosophy />
-      <Stats />
+      <ServiceDomains />
+      <DesignSystem />
+      <Craftsmanship />
+      <HealthyHome />
+      <JapaneseLiving />
+      <AiAdvisor />
       <Cta />
     </>
   );

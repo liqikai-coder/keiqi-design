@@ -40,6 +40,12 @@ const NUMBERS = [
   { v: "100%", l: "无醛交付" },
 ];
 
+const STEPS = ["初次咨询", "现场勘测", "定制设计", "精工施工", "验收交付"];
+
+const REGIONS = ["杭州", "上海", "深圳", "苏州", "南京", "宁波"];
+
+const VALUES_LIST = ["匠人精神", "长期主义", "一户一案", "健康优先"];
+
 export default function Page() {
   return (
     <>
@@ -65,8 +71,24 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 价值观 */}
+      {/* 设计理念 */}
       <section className="bg-keiqi-cream px-6 py-24">
+        <div className="mx-auto max-w-3xl">
+          <div className="mb-6 h-px w-16 bg-keiqi-red" />
+          <h2 className="font-display text-4xl text-keiqi-ink md:text-5xl">
+            设计理念
+          </h2>
+          <p className="mt-8 text-base leading-8 text-keiqi-ink/70">
+            好的住宅设计，是从生活方式倒推空间。先理解居住者十年后的生活，再决定墙体、收纳与光的位置。
+          </p>
+          <p className="mt-5 text-base leading-8 text-keiqi-ink/70">
+            凯奇不复制方案，一户一案——每一处动线、每一个储物单元、每一束灯光，都为特定的生活节奏而设。
+          </p>
+        </div>
+      </section>
+
+      {/* 价值观 */}
+      <section className="bg-white px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-14 text-center">
             <div className="mx-auto mb-5 h-px w-16 bg-keiqi-red" />
@@ -90,6 +112,28 @@ export default function Page() {
                   {v.desc}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 企业文化 */}
+      <section className="bg-keiqi-cream px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-14 text-center">
+            <div className="mx-auto mb-5 h-px w-16 bg-keiqi-red" />
+            <h2 className="font-display text-4xl text-keiqi-ink md:text-5xl">
+              企业文化
+            </h2>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {VALUES_LIST.map((t) => (
+              <span
+                key={t}
+                className="rounded-full border border-keiqi-mist bg-white px-6 py-3 text-lg text-keiqi-ink"
+              >
+                {t}
+              </span>
             ))}
           </div>
         </div>
@@ -120,8 +164,30 @@ export default function Page() {
         </div>
       </section>
 
+      {/* 服务流程 */}
+      <section className="bg-white px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-14 text-center">
+            <div className="mx-auto mb-5 h-px w-16 bg-keiqi-red" />
+            <h2 className="font-display text-4xl text-keiqi-ink md:text-5xl">
+              服务流程
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-5">
+            {STEPS.map((s, i) => (
+              <div key={s} className="rounded-lg border border-keiqi-mist p-6">
+                <div className="font-display text-4xl text-keiqi-red/30">
+                  0{i + 1}
+                </div>
+                <h3 className="mt-3 text-lg font-medium text-keiqi-ink">{s}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 数字 */}
-      <section className="bg-white px-6 py-20">
+      <section className="bg-keiqi-cream px-6 py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-10 md:grid-cols-4">
           {NUMBERS.map((n) => (
             <div key={n.l} className="text-center">
@@ -133,6 +199,31 @@ export default function Page() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* 服务区域 */}
+      <section className="bg-white px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8">
+            <div className="mb-5 h-px w-16 bg-keiqi-red" />
+            <h2 className="font-display text-4xl text-keiqi-ink md:text-5xl">
+              服务区域
+            </h2>
+          </div>
+          <p className="max-w-2xl text-base leading-8 text-keiqi-ink/60">
+            目前服务覆盖杭州、上海、深圳及长三角核心城市，更多城市正在扩展中。欢迎预约咨询。
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {REGIONS.map((c) => (
+              <span
+                key={c}
+                className="rounded-full border border-keiqi-mist px-5 py-2 text-sm text-keiqi-ink/70"
+              >
+                {c}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 

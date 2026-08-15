@@ -7,7 +7,8 @@
 
 **三份核心地基文件已就绪**：品牌标准手册 V3（`docs/01-brand-manual-v3.md`）、完整 PRD（`docs/03-prd.md`）、Codex 开发包（`CODEX-DEV-PACK.md`）。
 
-> **当前状态**：官网前端已本地构建完成并跑通（`web/` 子目录，Next.js 16 + Tailwind v4），8 个内页 + 首页全部填充真实品牌内容，可直接部署上线。
+> **当前状态**：V1.0 品牌官网已本地构建完成并跑通（`web/` 子目录，Next.js 16 + Tailwind v4）。
+> 首页按设计事务所定位重构为 **8 屏结构**（Hero → 品牌理念 → 服务领域 → 设计体系 → 精工体系™ → 健康住宅™ → 日本厨卫™ → AI设计顾问），案例中心为「案例持续更新中」状态，含 AI 顾问全局浮标。可直接部署上线。
 
 ## 品牌一句话
 
@@ -36,7 +37,9 @@ KEIQI-Design-OS/
 │   └── sprint/           # 每个 Sprint 的计划 + 验收标准
 ├── prompts/              # 每个 Sprint 给 Codex 的可执行 Prompt
 ├── assets/
-│   └── logo/             # KQ Logo 方案（4 套概念 SVG + 预览页）
+│   ├── logo/             # KQ Logo 方案（4 套概念 SVG + 预览页）
+│   ├── brand-assets/     # 品牌素材库（V2 上线支撑）
+│   └── photos/           # 工艺素材 / 案例素材库（见 docs/10-asset-library.md）
 ├── web/                  # ★ Next.js 前端工程（可独立部署）
 │   ├── app/              # 页面（首页 + 8 内页 + 案例详情）
 │   ├── components/       # 布局 / 区块 / 品牌组件
@@ -52,7 +55,7 @@ KEIQI-Design-OS/
 |---|------|------|
 | 01 | 初始化 Next.js 工程、设计系统、首页 | ✅ 已完成（本地） |
 | 02 | 关于我们、服务、品牌页面 | ✅ 已完成（/about /design /craftsmanship） |
-| 03 | 案例中心、详情页 | ✅ 已完成（/projects + /projects/[slug]） |
+| 03 | 案例中心、详情页 | ✅ 已完成（列表为「案例持续更新中」+ 三分类预留，详情模板就绪） |
 | 04 | AI 设计顾问聊天（演示 UI） | ✅ 已完成（/ai-designer） |
 | 05 | 自动报价 | ⬜（UI 已在 AI 页占位） |
 | 06 | 户型上传 | ⬜（UI 已在 AI 页占位） |
@@ -115,7 +118,7 @@ git push -u origin main
 
 ## 品牌权威依据
 
-所有视觉、配色、字体、文案以 [`docs/01-brand-manual-v3.md`](docs/01-brand-manual-v3.md)（品牌标准手册 V3）为准；[`docs/01-brand-guide.md`](docs/01-brand-guide.md) 为 V2 原始素材。Logo 方案见 [`assets/logo/preview.html`](assets/logo/preview.html)。
+所有视觉、配色、字体、文案以 [`docs/01-brand-manual-v3.md`](docs/01-brand-manual-v3.md)（品牌标准手册 V3）为准；[`docs/01-brand-guide.md`](docs/01-brand-guide.md) 为 V2 原始素材。Logo 方案见 [`assets/logo/preview.html`](assets/logo/preview.html)。品牌 / 工艺 / 案例三素材库整理规范见 [`docs/10-asset-library.md`](docs/10-asset-library.md)。
 
 ---
 

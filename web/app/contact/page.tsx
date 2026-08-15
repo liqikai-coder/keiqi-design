@@ -12,7 +12,7 @@ const CHANNELS = [
   { icon: Phone, label: "电话", value: "400-XXX-XXXX" },
   { icon: MessageCircle, label: "微信", value: "keiqi-design" },
   { icon: Mail, label: "邮箱", value: "hello@keiqi.design" },
-  { icon: MapPin, label: "城市", value: "杭州 · 上海 · 深圳" },
+  { icon: MapPin, label: "地址", value: "杭州市 · 西湖区（总部）" },
 ];
 
 export default function Page() {
@@ -55,6 +55,20 @@ export default function Page() {
 
           {/* 表单 */}
           <ContactForm />
+        </div>
+
+        {/* 地图占位 */}
+        <div className="mt-20">
+          <div className="mb-6 h-px w-16 bg-keiqi-red" />
+          <h2 className="font-display text-3xl text-keiqi-ink">到访指引</h2>
+          <div className="mt-6 grid aspect-[21/9] w-full place-items-center rounded-lg border border-dashed border-keiqi-mist bg-keiqi-cream/60">
+            <div className="text-center">
+              <MapPin className="mx-auto h-8 w-8 text-keiqi-red" strokeWidth={1.4} />
+              <p className="mt-4 text-sm tracking-wide text-keiqi-ink/50">
+                地图服务接入中 · 预约到访请先联系顾问
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </>
