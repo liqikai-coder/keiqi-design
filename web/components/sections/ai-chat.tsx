@@ -1,0 +1,92 @@
+"use client";
+
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { Send } from "lucide-react";
+
+interface Msg {
+  role: "user" | "bot";
+  text: string;
+}
+
+const SEED: Msg[] = [
+  {
+    role: "bot",
+    text: "您好，我是凯奇 AI 设计顾问。可以聊聊您的户型、家庭成员与风格偏好，我帮您做初步的空间规划建议。",
+  },
+];
+
+const REPLIES = [
+  "感谢分享。针对您的需求，我会优先保证动线的通透与收纳效率，这正是日本整体厨卫体系的强项。",
+  "从健康住宅角度，建议全屋采用无醛板材与水性涂装，交付前做空气检测并出具验收报告。",
+  "可以先上传户型图，我会给出空间重组与采光优化的初步建议。",
+  "结合您的预算，我可以为您生成一份自动报价初稿，供您参考。",
+];
+
+export function AiChat() {
+  const [messages, setMessages] = useState<Msg[]>(SEED);
+  const [input, setInput] = useState("");
+
+  function send() {
+    const text = input.trim();
+    if (!text) return;
+    const next = [...messages, { role: "user" as const, text }];
+    setMessages(next);
+    setInput("");
+    setTimeout(() => {
+      const reply = REPLIES[(next.length - 1) % REPLIES.length];
+      setMessages((m) => [...m, { role: "bot" as const, text: reply }]);
+    }, 600);
+  }
+
+  return (
+    <div className="flex h-[460px] flex-col overflow-hidden rounded-xl border border-keiqi-mist bg-white">
+      <div className="border-b border-keiqi-mist bg-keiqi-ink px-5 py-3 text-sm text-keiqi-cream">
+        凯奇 AI 设计顾问 · 在线演示
+      </div>
+      <div className="flex-1 space-y-4 overflow-y-auto p-5">
+        {messages.map((m, i) => (
+          <div
+            key={i}
+            className={cn(
+              "flex",
+              m.role === "user" ? "justify-end" : "justify-start"
+            )}
+          >
+            <div
+              className={cn(
+                "max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-7",
+                m.role === "user"
+                  ? "bg-keiqi-red text-white"
+                  : "bg-keiqi-cream text-keiqi-ink"
+              )}
+            >
+              {m.text}
+            </div>
+          </div>
+        ))}
+      </div>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          send();
+        }}
+        className="flex items-center gap-2 border-t border-keiqi-mist p-3"
+      >
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="描述您的户型或需求…"
+          className="flex-1 rounded-full border border-keiqi-mist bg-keiqi-cream px-4 py-2.5 text-sm outline-none focus:border-keiqi-red"
+        />
+        <button
+          type="submit"
+          aria-label="发送"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-keiqi-red text-white transition-opacity hover:opacity-90"
+        >
+          <Send className="h-4 w-4" />
+        </button>
+      </form>
+    </div>
+  );
+}

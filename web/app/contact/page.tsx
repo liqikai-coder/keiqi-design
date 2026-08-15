@@ -1,0 +1,62 @@
+import { PageHero } from "@/components/layout/page-hero";
+import { ContactForm } from "@/components/sections/contact-form";
+import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
+
+export const metadata = {
+  title: "预约咨询",
+  description:
+    "预约凯奇设计专属空间咨询。电话、微信、邮箱多渠道联系，1 个工作日内回拨。",
+};
+
+const CHANNELS = [
+  { icon: Phone, label: "电话", value: "400-XXX-XXXX" },
+  { icon: MessageCircle, label: "微信", value: "keiqi-design" },
+  { icon: Mail, label: "邮箱", value: "hello@keiqi.design" },
+  { icon: MapPin, label: "城市", value: "杭州 · 上海 · 深圳" },
+];
+
+export default function Page() {
+  return (
+    <>
+      <PageHero
+        en="Contact"
+        title="预约咨询"
+        subtitle="预约一次专属空间设计咨询，或留下联系方式，凯奇顾问将在 1 个工作日内与您联系。"
+      />
+
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1.2fr]">
+          {/* 联系方式 */}
+          <div>
+            <div className="mb-6 h-px w-16 bg-keiqi-red" />
+            <h2 className="font-display text-3xl text-keiqi-ink">联系方式</h2>
+            <ul className="mt-8 space-y-5">
+              {CHANNELS.map((c) => {
+                const Icon = c.icon;
+                return (
+                  <li key={c.label} className="flex items-center gap-4">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-full border border-keiqi-mist bg-keiqi-cream">
+                      <Icon className="h-5 w-5 text-keiqi-red" strokeWidth={1.5} />
+                    </span>
+                    <div>
+                      <div className="text-xs tracking-wide text-keiqi-ink/50">
+                        {c.label}
+                      </div>
+                      <div className="text-base text-keiqi-ink">{c.value}</div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+            <p className="mt-8 text-sm leading-7 text-keiqi-ink/50">
+              表单为演示态，提交不会真实上传。Sprint 08 将接入 CRM，实现留资自动建档与跟进。
+            </p>
+          </div>
+
+          {/* 表单 */}
+          <ContactForm />
+        </div>
+      </section>
+    </>
+  );
+}

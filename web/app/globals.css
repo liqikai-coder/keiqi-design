@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* ===== 凯奇设计 品牌令牌（来自 docs/01-brand-manual-v3.md） ===== */
+:root {
+  --keiqi-red: #c1121f; /* 凯奇红 · 唯一强调色 */
+  --keiqi-cream: #f8f5f0; /* 暖白 · 主背景 */
+  --keiqi-ink: #111111; /* 深黑 · 文字 */
+  --keiqi-mist: #e5e5e5; /* 浅灰 · 边框/分割 */
+}
+
+@theme inline {
+  --color-keiqi-red: var(--keiqi-red);
+  --color-keiqi-cream: var(--keiqi-cream);
+  --color-keiqi-ink: var(--keiqi-ink);
+  --color-keiqi-mist: var(--keiqi-mist);
+
+  /* 语义令牌 */
+  --color-background: var(--keiqi-cream);
+  --color-foreground: var(--keiqi-ink);
+  --color-primary: var(--keiqi-red);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  /* 英文 Montserrat + 中文思源黑体兜底 */
+  font-family: var(--font-montserrat), "Source Han Sans SC", "Noto Sans SC",
+    "PingFang SC", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 英文衬线显示字体（Cormorant Garamond）+ 中文兜底 */
+.font-display {
+  font-family: var(--font-cormorant), "Source Han Sans SC", "Noto Sans SC",
+    "PingFang SC", Georgia, serif;
+}
+
+/* 极淡 KQ 水印（Hero 背景） */
+.kq-watermark {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+/* 表单输入框（contact-form 复用） */
+.input {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--keiqi-mist);
+  background: var(--keiqi-cream);
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--keiqi-ink);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.input::placeholder {
+  color: color-mix(in srgb, var(--keiqi-ink) 35%, transparent);
+}
+.input:focus {
+  border-color: var(--keiqi-red);
+}
