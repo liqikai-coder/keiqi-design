@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const STANDARDS = ["水电系统", "防水系统", "木作系统", "涂装系统", "交付体系"];
 
-/* 工艺氛围图（Pexels 免费商用，上线替换为真实工地照片） */
+/* 工艺氛围图（Pexels 免费商用 · 手工刨刀木工特写，上线替换为真实工地照片） */
 const CRAFT_IMAGE =
-  "https://images.pexels.com/photos/13722856/pexels-photo-13722856.jpeg";
+  "https://images.pexels.com/photos/37358115/pexels-photo-37358115.jpeg";
 
 export function Craftsmanship() {
   return (

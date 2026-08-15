@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { saveSubmission } from "@/lib/submissions";
 
 const PROJECT_TYPES = ["别墅", "大平层", "顶层复式", "私人会所", "其他"];
 
@@ -11,7 +13,14 @@ export function ContactForm() {
 
   function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // 演示态：本地提交成功。Sprint 08 将接入 CRM（详见 docs/03-prd.md §7.4）。
+    const data = new FormData(e.currentTarget);
+    saveSubmission({
+      source: "contact",
+      name: String(data.get("name") || ""),
+      phone: String(data.get("phone") || ""),
+      projectType: type,
+      message: String(data.get("message") || ""),
+    });
     setSent(true);
   }
 
@@ -23,15 +32,23 @@ export function ContactForm() {
         </div>
         <h3 className="font-display text-2xl text-keiqi-cream">已收到您的预约</h3>
         <p className="mt-3 text-sm text-keiqi-cream/55">
-          凯奇顾问将在 1 个工作日内与您联系。本表单为演示态，正式提交将写入 CRM。
+          凯奇顾问将在 1 个工作日内与您联系。您的需求已记录，可在「需求汇总」查看。
         </p>
-        <button
-          type="button"
-          onClick={() => setSent(false)}
-          className="mt-6 text-sm text-keiqi-gold-soft underline-offset-4 hover:underline"
-        >
-          再填一份
-        </button>
+        <div className="mt-6 flex items-center justify-center gap-4 text-sm">
+          <button
+            type="button"
+            onClick={() => setSent(false)}
+            className="text-keiqi-gold-soft underline-offset-4 hover:underline"
+          >
+            再填一份
+          </button>
+          <Link
+            href="/submissions"
+            className="text-keiqi-cream/55 underline-offset-4 hover:text-keiqi-gold-soft hover:underline"
+          >
+            查看汇总 →
+          </Link>
+        </div>
       </div>
     );
   }
@@ -102,7 +119,7 @@ export function ContactForm() {
         提交预约
       </button>
       <p className="mt-3 text-center text-xs text-keiqi-cream/40">
-        提交即表示同意凯奇与您电话联系。演示阶段数据不会上传。
+        提交即表示同意凯奇与您电话联系。
       </p>
     </form>
   );

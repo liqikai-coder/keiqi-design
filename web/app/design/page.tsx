@@ -59,6 +59,7 @@ export default function Page() {
         en="Custom Design"
         title="定制设计"
         subtitle="设计的不只是房子，而是未来十年的生活方式。凯奇坚持一户一案，从生活方式出发，不复制任何方案。"
+        bgImage="https://images.pexels.com/photos/8135503/pexels-photo-8135503.jpeg"
       />
 
       {/* 设计哲学 */}

@@ -34,6 +34,7 @@ export default function Page() {
         en="KEIQI AI Designer™"
         title="凯奇 AI 设计顾问™"
         subtitle="以 AI 重新定义高端住宅设计的前端体验。对话、报价与户型识别，让咨询从第一次接触就开始。"
+        bgImage="https://images.pexels.com/photos/31214951/pexels-photo-31214951.jpeg"
       />
 
       {/* 能力 */}
@@ -79,8 +80,8 @@ export default function Page() {
               先聊一聊
             </h2>
             <p className="mt-5 text-keiqi-cream/60">
-              右侧是一个在线演示。输入您的户型或需求，体验凯奇 AI
-              设计顾问的初步回应。完整能力将在接入大模型后开放。
+              输入您的户型或需求，体验凯奇 AI
+              设计顾问的初步回应。对话后可留下联系方式，获取详细方案。
             </p>
             <Link
               href="/contact"

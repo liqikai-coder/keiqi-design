@@ -58,7 +58,7 @@ export function SiteFooter() {
             联系
           </h3>
           <ul className="mt-4 space-y-3 text-sm text-keiqi-cream/70">
-            <li>电话：400-XXX-XXXX</li>
+            <li>电话：400-888-0688</li>
             <li>微信：keiqi-design</li>
             <li>邮箱：hello@keiqi.design</li>
           </ul>
@@ -66,8 +66,14 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-keiqi-line/60">
-        <div className="mx-auto max-w-7xl px-6 py-6 text-xs text-keiqi-cream/35">
-          © 2026 KEIQI DESIGN 凯奇设计 · 高端住宅空间定制机构
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-6 text-xs text-keiqi-cream/35 sm:flex-row pb-24 md:pb-6">
+          <span>© 2026 KEIQI DESIGN 凯奇设计 · 高端住宅空间定制机构</span>
+          <Link
+            href="/submissions"
+            className="transition-colors hover:text-keiqi-gold-soft"
+          >
+            需求汇总
+          </Link>
         </div>
       </div>
     </footer>

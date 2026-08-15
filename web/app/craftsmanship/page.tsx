@@ -48,6 +48,7 @@ export default function Page() {
         en="KEIQI Craftsmanship™"
         title="凯奇精工体系™"
         subtitle="标准化工艺，精细化施工。凯奇以五大标准，让高端住宅的工艺可被验收、可被传承。"
+        bgImage="https://images.pexels.com/photos/37358115/pexels-photo-37358115.jpeg"
       />
 
       <section className="bg-white px-6 py-24">

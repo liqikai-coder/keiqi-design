@@ -18,9 +18,9 @@ const fadeUp: Variants = {
   }),
 };
 
-/* 豪宅外景背景（Pexels 免费商用） */
+/* 豪宅外景背景（Pexels 免费商用 · 黄昏带泳池的豪华别墅） */
 const HERO_IMAGE =
-  "https://images.pexels.com/photos/13203184/pexels-photo-13203184.jpeg";
+  "https://images.pexels.com/photos/35060260/pexels-photo-35060260.jpeg";
 
 export function Hero() {
   return (
@@ -38,14 +38,6 @@ export function Hero() {
       {/* 深色遮罩：左→右 保证文字可读，顶部→底部 融合墨夜 */}
       <div className="absolute inset-0 bg-gradient-to-r from-keiqi-night/95 via-keiqi-night/65 to-keiqi-night/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-keiqi-night via-transparent to-keiqi-night/75" />
-
-      {/* 极淡 KQ 水印 */}
-      <span
-        aria-hidden
-        className="kq-watermark pointer-events-none absolute -right-8 top-1/2 -translate-y-1/2 select-none text-[38vw] font-semibold leading-none text-keiqi-gold/[0.06]"
-      >
-        KQ
-      </span>
 
       <div className="relative mx-auto w-full max-w-7xl px-6 pt-16">
         <motion.p

@@ -50,6 +50,7 @@ export default function Page() {
         en="KEIQI Healthy Home™"
         title="凯奇健康住宅体系™"
         subtitle="健康不是选配，而是住宅的基础标准。凯奇以无醛板材、无醛辅材与水性环保涂装，重建居住的健康底线。"
+        bgImage="https://images.pexels.com/photos/37033511/pexels-photo-37033511.jpeg"
       />
 
       <section className="bg-white px-6 py-24">

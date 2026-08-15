@@ -14,6 +14,7 @@ export default function Page() {
         en="Projects"
         title="案例中心"
         subtitle="每一套作品，都是一次独立命题。从设计到交付，凯奇以作品说话。"
+        bgImage="https://images.pexels.com/photos/8572163/pexels-photo-8572163.jpeg"
       />
 
       <section className="bg-keiqi-night px-6 py-20 md:py-24">

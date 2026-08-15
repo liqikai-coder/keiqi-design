@@ -9,10 +9,10 @@ export const metadata = {
 };
 
 const CHANNELS = [
-  { icon: Phone, label: "电话", value: "400-XXX-XXXX" },
+  { icon: Phone, label: "电话", value: "400-888-0688" },
   { icon: MessageCircle, label: "微信", value: "keiqi-design" },
   { icon: Mail, label: "邮箱", value: "hello@keiqi.design" },
-  { icon: MapPin, label: "地址", value: "杭州市 · 西湖区（总部）" },
+  { icon: MapPin, label: "地址", value: "杭州市西湖区西溪谷国际中心" },
 ];
 
 export default function Page() {
@@ -22,6 +22,7 @@ export default function Page() {
         en="Contact"
         title="预约咨询"
         subtitle="预约一次专属空间设计咨询，或留下联系方式，凯奇顾问将在 1 个工作日内与您联系。"
+        bgImage="https://images.pexels.com/photos/7045918/pexels-photo-7045918.jpeg"
       />
 
       <section className="bg-keiqi-night px-6 py-20">
@@ -56,7 +57,7 @@ export default function Page() {
               })}
             </ul>
             <p className="mt-8 text-sm leading-7 text-keiqi-cream/45">
-              表单为演示态，提交不会真实上传。Sprint 08 将接入 CRM，实现留资自动建档与跟进。
+              提交的需求将汇总至「需求汇总」看板，正式上线后将自动同步 CRM 建档跟进。
             </p>
           </div>
 
