@@ -40,8 +40,8 @@ export function AiChat() {
   }
 
   return (
-    <div className="flex h-[460px] flex-col overflow-hidden rounded-xl border border-keiqi-mist bg-white">
-      <div className="border-b border-keiqi-mist bg-keiqi-ink px-5 py-3 text-sm text-keiqi-cream">
+    <div className="flex h-[460px] flex-col overflow-hidden rounded-xl border border-keiqi-line bg-keiqi-night-2">
+      <div className="border-b border-keiqi-line bg-keiqi-night-3 px-5 py-3 text-sm text-keiqi-gold-soft">
         凯奇 AI 设计顾问 · 在线演示
       </div>
       <div className="flex-1 space-y-4 overflow-y-auto p-5">
@@ -57,8 +57,8 @@ export function AiChat() {
               className={cn(
                 "max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-7",
                 m.role === "user"
-                  ? "bg-keiqi-red text-white"
-                  : "bg-keiqi-cream text-keiqi-ink"
+                  ? "bg-keiqi-gold text-keiqi-night"
+                  : "border border-keiqi-line bg-keiqi-night-3 text-keiqi-cream/85"
               )}
             >
               {m.text}
@@ -71,18 +71,18 @@ export function AiChat() {
           e.preventDefault();
           send();
         }}
-        className="flex items-center gap-2 border-t border-keiqi-mist p-3"
+        className="flex items-center gap-2 border-t border-keiqi-line p-3"
       >
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="描述您的户型或需求…"
-          className="flex-1 rounded-full border border-keiqi-mist bg-keiqi-cream px-4 py-2.5 text-sm outline-none focus:border-keiqi-red"
+          className="flex-1 rounded-full border border-keiqi-line bg-keiqi-night-3 px-4 py-2.5 text-sm text-keiqi-cream outline-none placeholder:text-keiqi-cream/30 focus:border-keiqi-gold"
         />
         <button
           type="submit"
           aria-label="发送"
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-keiqi-red text-white transition-opacity hover:opacity-90"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-keiqi-gold text-keiqi-night transition-opacity hover:opacity-90"
         >
           <Send className="h-4 w-4" />
         </button>

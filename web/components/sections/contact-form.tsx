@@ -17,18 +17,18 @@ export function ContactForm() {
 
   if (sent) {
     return (
-      <div className="rounded-xl border border-keiqi-mist bg-white p-10 text-center">
-        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-keiqi-red text-2xl text-white">
+      <div className="rounded-xl border border-keiqi-line bg-keiqi-night-2 p-10 text-center">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-keiqi-gold text-2xl text-keiqi-night">
           ✓
         </div>
-        <h3 className="font-display text-2xl text-keiqi-ink">已收到您的预约</h3>
-        <p className="mt-3 text-sm text-keiqi-ink/60">
+        <h3 className="font-display text-2xl text-keiqi-cream">已收到您的预约</h3>
+        <p className="mt-3 text-sm text-keiqi-cream/55">
           凯奇顾问将在 1 个工作日内与您联系。本表单为演示态，正式提交将写入 CRM。
         </p>
         <button
           type="button"
           onClick={() => setSent(false)}
-          className="mt-6 text-sm text-keiqi-red underline-offset-4 hover:underline"
+          className="mt-6 text-sm text-keiqi-gold-soft underline-offset-4 hover:underline"
         >
           再填一份
         </button>
@@ -39,7 +39,7 @@ export function ContactForm() {
   return (
     <form
       onSubmit={submit}
-      className="rounded-xl border border-keiqi-mist bg-white p-8"
+      className="rounded-xl border border-keiqi-line bg-keiqi-night-2 p-8"
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="姓名" required>
@@ -62,7 +62,7 @@ export function ContactForm() {
       </div>
 
       <div className="mt-5">
-        <label className="mb-2 block text-sm text-keiqi-ink/70">
+        <label className="mb-2 block text-sm text-keiqi-cream/70">
           项目类型
         </label>
         <div className="flex flex-wrap gap-2">
@@ -74,8 +74,8 @@ export function ContactForm() {
               className={cn(
                 "rounded-full border px-4 py-2 text-sm transition-colors",
                 type === t
-                  ? "border-keiqi-red bg-keiqi-red text-white"
-                  : "border-keiqi-ink/20 text-keiqi-ink/70 hover:border-keiqi-red hover:text-keiqi-red"
+                  ? "border-keiqi-gold bg-keiqi-gold text-keiqi-night"
+                  : "border-keiqi-line text-keiqi-cream/60 hover:border-keiqi-gold/50 hover:text-keiqi-gold-soft"
               )}
             >
               {t}
@@ -97,11 +97,11 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="mt-6 w-full rounded-full bg-keiqi-red py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+        className="mt-6 w-full rounded-full bg-keiqi-gold py-3 text-sm font-medium text-keiqi-night transition-opacity hover:opacity-90"
       >
         提交预约
       </button>
-      <p className="mt-3 text-center text-xs text-keiqi-ink/40">
+      <p className="mt-3 text-center text-xs text-keiqi-cream/40">
         提交即表示同意凯奇与您电话联系。演示阶段数据不会上传。
       </p>
     </form>
@@ -119,9 +119,9 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-2 block text-sm text-keiqi-ink/70">
+      <span className="mb-2 block text-sm text-keiqi-cream/70">
         {label}
-        {required && <span className="text-keiqi-red"> *</span>}
+        {required && <span className="text-keiqi-gold-soft"> *</span>}
       </span>
       {children}
     </label>

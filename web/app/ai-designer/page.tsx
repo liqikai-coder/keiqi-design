@@ -37,11 +37,11 @@ export default function Page() {
       />
 
       {/* 能力 */}
-      <section className="bg-white px-6 py-24">
+      <section className="bg-keiqi-night px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-14 text-center">
-            <div className="mx-auto mb-5 h-px w-16 bg-keiqi-red" />
-            <h2 className="font-display text-4xl text-keiqi-ink md:text-5xl">
+            <div className="mx-auto mb-5 h-px w-16 bg-keiqi-gold" />
+            <h2 className="font-display text-4xl text-keiqi-cream md:text-5xl">
               三大能力
             </h2>
           </div>
@@ -51,13 +51,16 @@ export default function Page() {
               return (
                 <div
                   key={c.title}
-                  className="rounded-lg border border-keiqi-mist bg-keiqi-cream p-8"
+                  className="rounded-lg border border-keiqi-line bg-keiqi-night-2 p-8 transition-colors hover:bg-keiqi-night-3"
                 >
-                  <Icon className="h-9 w-9 text-keiqi-red" strokeWidth={1.4} />
-                  <h3 className="font-display mt-6 text-2xl text-keiqi-ink">
+                  <Icon
+                    className="h-9 w-9 text-keiqi-gold-soft"
+                    strokeWidth={1.4}
+                  />
+                  <h3 className="font-display mt-6 text-2xl text-keiqi-cream">
                     {c.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-7 text-keiqi-ink/60">
+                  <p className="mt-3 text-sm leading-7 text-keiqi-cream/55">
                     {c.desc}
                   </p>
                 </div>
@@ -68,29 +71,31 @@ export default function Page() {
       </section>
 
       {/* 对话演示 */}
-      <section className="bg-keiqi-cream px-6 py-24">
+      <section className="border-y border-keiqi-line bg-keiqi-night-2 px-6 py-24">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 md:items-center">
           <div>
-            <div className="mb-5 h-px w-16 bg-keiqi-red" />
-            <h2 className="font-display text-4xl text-keiqi-ink md:text-5xl">
+            <div className="mb-5 h-px w-16 bg-keiqi-gold" />
+            <h2 className="font-display text-4xl text-keiqi-cream md:text-5xl">
               先聊一聊
             </h2>
-            <p className="mt-5 text-keiqi-ink/60">
-              右侧是一个在线演示。输入您的户型或需求，体验凯奇 AI 设计顾问的初步回应。完整能力将在接入大模型后开放。
+            <p className="mt-5 text-keiqi-cream/60">
+              右侧是一个在线演示。输入您的户型或需求，体验凯奇 AI
+              设计顾问的初步回应。完整能力将在接入大模型后开放。
             </p>
             <Link
               href="/contact"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-keiqi-red px-8 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+              className="group mt-8 inline-flex items-center gap-2 rounded-full border border-keiqi-gold bg-keiqi-gold/15 px-8 py-3 text-sm font-medium text-keiqi-gold-soft transition-colors hover:bg-keiqi-gold hover:text-keiqi-night"
             >
-              预约人工顾问 <ArrowRight className="h-4 w-4" />
+              预约人工顾问
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
           <AiChat />
         </div>
       </section>
 
-      <section className="bg-keiqi-cream px-6 pb-24 text-center">
-        <p className="font-display text-2xl text-keiqi-ink md:text-3xl">
+      <section className="bg-keiqi-night px-6 py-24 text-center">
+        <p className="font-display text-2xl text-keiqi-cream md:text-3xl">
           数字化服务入口 · 凯奇AI设计顾问
         </p>
       </section>

@@ -24,18 +24,18 @@ const COLUMNS = [
 
 export function SiteFooter() {
   return (
-    <footer className="bg-keiqi-ink text-keiqi-cream">
+    <footer className="border-t border-keiqi-line bg-keiqi-night-2 text-keiqi-cream">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-4">
         <div>
           <Logo inverted />
-          <p className="mt-4 max-w-xs text-sm leading-7 text-keiqi-cream/60">
+          <p className="mt-4 max-w-xs text-sm leading-7 text-keiqi-cream/55">
             凯奇设计 · 高端住宅空间定制机构。设计的不只是房子，而是未来十年的生活方式。
           </p>
         </div>
 
         {COLUMNS.map((col) => (
           <div key={col.title}>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-keiqi-cream/50">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-keiqi-gold-soft/80">
               {col.title}
             </h3>
             <ul className="mt-4 space-y-3">
@@ -43,7 +43,7 @@ export function SiteFooter() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-keiqi-cream/80 transition-colors hover:text-keiqi-red"
+                    className="text-sm text-keiqi-cream/70 transition-colors hover:text-keiqi-gold-soft"
                   >
                     {l.label}
                   </Link>
@@ -54,10 +54,10 @@ export function SiteFooter() {
         ))}
 
         <div>
-          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-keiqi-cream/50">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-keiqi-gold-soft/80">
             联系
           </h3>
-          <ul className="mt-4 space-y-3 text-sm text-keiqi-cream/80">
+          <ul className="mt-4 space-y-3 text-sm text-keiqi-cream/70">
             <li>电话：400-XXX-XXXX</li>
             <li>微信：keiqi-design</li>
             <li>邮箱：hello@keiqi.design</li>
@@ -65,8 +65,8 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-keiqi-cream/10">
-        <div className="mx-auto max-w-7xl px-6 py-6 text-xs text-keiqi-cream/40">
+      <div className="border-t border-keiqi-line/60">
+        <div className="mx-auto max-w-7xl px-6 py-6 text-xs text-keiqi-cream/35">
           © 2026 KEIQI DESIGN 凯奇设计 · 高端住宅空间定制机构
         </div>
       </div>

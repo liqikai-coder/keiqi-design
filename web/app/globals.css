@@ -1,28 +1,45 @@
 @import "tailwindcss";
 
-/* ===== 凯奇设计 品牌令牌（来自 docs/01-brand-manual-v3.md） ===== */
+/* ===== 凯奇设计 品牌令牌（docs/01-brand-manual-v3.md） =====
+   深色 · 暗金基调（设计事务所路线）：
+   - 墨夜背景 + 暗金点缀 + 凯奇红唯一强调
+*/
 :root {
   --keiqi-red: #c1121f; /* 凯奇红 · 唯一强调色 */
-  --keiqi-cream: #f8f5f0; /* 暖白 · 主背景 */
+  --keiqi-cream: #f8f5f0; /* 暖白 · 浅色内容区背景 */
   --keiqi-ink: #111111; /* 深黑 · 文字 */
-  --keiqi-mist: #e5e5e5; /* 浅灰 · 边框/分割 */
+
+  /* 暗夜金主题（V1.1） */
+  --keiqi-gold: #b08d57; /* 暗金 · 主点缀 */
+  --keiqi-gold-soft: #c9a96b; /* 暖金 · 高光 */
+  --keiqi-gold-deep: #8a6d3f; /* 深金 · 深底描边 */
+  --keiqi-night: #0b0b0d; /* 墨夜 · 全站主背景 */
+  --keiqi-night-2: #121216; /* 次级深色 · 卡片 */
+  --keiqi-night-3: #1a1a20; /* 三级深色 · 悬浮/分区 */
+  --keiqi-line: rgba(201, 169, 107, 0.22); /* 暗金分割线 */
 }
 
 @theme inline {
   --color-keiqi-red: var(--keiqi-red);
   --color-keiqi-cream: var(--keiqi-cream);
   --color-keiqi-ink: var(--keiqi-ink);
-  --color-keiqi-mist: var(--keiqi-mist);
+  --color-keiqi-gold: var(--keiqi-gold);
+  --color-keiqi-gold-soft: var(--keiqi-gold-soft);
+  --color-keiqi-gold-deep: var(--keiqi-gold-deep);
+  --color-keiqi-night: var(--keiqi-night);
+  --color-keiqi-night-2: var(--keiqi-night-2);
+  --color-keiqi-night-3: var(--keiqi-night-3);
+  --color-keiqi-line: var(--keiqi-line);
 
   /* 语义令牌 */
-  --color-background: var(--keiqi-cream);
-  --color-foreground: var(--keiqi-ink);
-  --color-primary: var(--keiqi-red);
+  --color-background: var(--keiqi-night);
+  --color-foreground: var(--keiqi-cream);
+  --color-primary: var(--keiqi-gold);
 }
 
 body {
-  background: var(--color-background);
-  color: var(--color-foreground);
+  background: var(--keiqi-night);
+  color: var(--keiqi-cream);
   /* 英文 Montserrat + 中文思源黑体兜底 */
   font-family: var(--font-montserrat), "Source Han Sans SC", "Noto Sans SC",
     "PingFang SC", system-ui, sans-serif;
@@ -41,22 +58,36 @@ body {
   font-family: var(--font-cormorant), Georgia, serif;
 }
 
-/* 表单输入框（contact-form 复用） */
+/* 金色金属渐变文字（大标题） */
+.text-gold-gradient {
+  background: linear-gradient(
+    180deg,
+    #f4ead6 0%,
+    #e3cf9f 34%,
+    #c9a96b 62%,
+    #a8864d 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 表单输入框（contact-form 复用，深色版） */
 .input {
   width: 100%;
   border-radius: 0.5rem;
-  border: 1px solid var(--keiqi-mist);
-  background: var(--keiqi-cream);
+  border: 1px solid rgba(201, 169, 107, 0.25);
+  background: rgba(255, 255, 255, 0.04);
   padding: 0.625rem 0.875rem;
   font-size: 0.875rem;
   line-height: 1.5;
-  color: var(--keiqi-ink);
+  color: var(--keiqi-cream);
   outline: none;
   transition: border-color 0.2s ease;
 }
 .input::placeholder {
-  color: color-mix(in srgb, var(--keiqi-ink) 35%, transparent);
+  color: rgba(248, 245, 240, 0.35);
 }
 .input:focus {
-  border-color: var(--keiqi-red);
+  border-color: var(--keiqi-gold);
 }
