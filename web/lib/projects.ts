@@ -4,7 +4,7 @@
  * 唯一数据源：首页「精选作品」、/projects 案例中心、/projects/[slug] 详情页
  * 全部从这里读取。替换真实案例时，只改本文件的字段即可，页面自动更新。
  *
- * 图片素材：Pexels 免费商用（images.pexels.com，已加入 next.config 白名单）。
+ * 图片素材：已本地化到 public/images/pexels/（Pexels 免费商用）。
  * 上线替换为真实工地/交付实景照：把 image/gallery 改为本地路径（/images/xxx.jpg）即可。
  */
 
@@ -26,8 +26,7 @@ export interface Project {
   highlights: string[];
 }
 
-const px = (id: number) =>
-  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg`;
+const px = (id: number) => `/images/pexels/${id}.jpg`;
 
 /** 案例数据（占位命名体系，详见品牌手册 V3 §16）。正式上线替换为真实案例 + 实景图。 */
 export const PROJECTS: Project[] = [

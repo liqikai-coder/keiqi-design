@@ -18,9 +18,8 @@ const fadeUp: Variants = {
   }),
 };
 
-/* 豪宅外景背景（Pexels 免费商用 · 黄昏带泳池的豪华别墅） */
-const HERO_IMAGE =
-  "https://images.pexels.com/photos/35060260/pexels-photo-35060260.jpeg";
+/* 豪宅外景背景（黄昏带泳池的豪华别墅 · Pexels 免费商用 · 已本地化） */
+const HERO_IMAGE = "/images/pexels/35060260.jpg";
 
 export function Hero() {
   return (
@@ -56,11 +55,11 @@ export function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="show"
-          className="font-display mt-7 text-6xl leading-[1.02] tracking-tight md:text-8xl lg:text-[7.5rem]"
+          className="font-art mt-7 text-6xl leading-[1.05] tracking-[0.02em] md:text-8xl lg:text-[7.5rem]"
         >
           <span className="text-gold-gradient">KEIQI</span>
           <br />
-          <span className="text-gold-gradient">DESIGN</span>
+          <span className="text-gold-gradient tracking-[0.08em]">DESIGN</span>
         </motion.h1>
 
         <motion.p

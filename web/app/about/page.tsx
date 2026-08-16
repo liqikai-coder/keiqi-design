@@ -53,7 +53,7 @@ export default function Page() {
         en="About"
         title="关于凯奇"
         subtitle="凯奇设计 · 高端住宅空间定制机构。专注别墅、大平层、顶层复式与私人会所。"
-        bgImage="https://images.pexels.com/photos/7166640/pexels-photo-7166640.jpeg"
+        bgImage="/images/pexels/7166640.jpg"
       />
 
       {/* 品牌故事 */}

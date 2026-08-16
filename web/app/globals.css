@@ -53,9 +53,22 @@ body {
     "PingFang SC", Georgia, serif;
 }
 
-/* 极淡 KQ 水印（Hero 背景） */
-.kq-watermark {
-  font-family: var(--font-cormorant), Georgia, serif;
+/* 艺术标题字体（Playfair Display · 高对比粗衬线）· KEIQI DESIGN 主标 */
+.font-art {
+  font-family: var(--font-playfair), "Source Han Sans SC", "Noto Sans SC",
+    "PingFang SC", Georgia, serif;
+  font-weight: 800;
+}
+
+/* 吉祥物轻浮动动画 */
+@keyframes kq-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 /* 金色金属渐变文字（大标题） */

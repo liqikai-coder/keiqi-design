@@ -34,7 +34,7 @@ export default function Page() {
         en="KEIQI AI Designer™"
         title="凯奇 AI 设计顾问™"
         subtitle="以 AI 重新定义高端住宅设计的前端体验。对话、报价与户型识别，让咨询从第一次接触就开始。"
-        bgImage="https://images.pexels.com/photos/31214951/pexels-photo-31214951.jpeg"
+        bgImage="/images/pexels/31214951.jpg"
       />
 
       {/* 能力 */}

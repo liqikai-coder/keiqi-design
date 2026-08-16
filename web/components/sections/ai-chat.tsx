@@ -4,6 +4,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Send } from "lucide-react";
 import { saveSubmission } from "@/lib/submissions";
+import { Mascot } from "@/components/brand/mascot";
 
 interface Msg {
   role: "user" | "bot";
@@ -56,8 +57,13 @@ export function AiChat() {
 
   return (
     <div className="overflow-hidden rounded-xl border border-keiqi-line bg-keiqi-night-2">
-      <div className="border-b border-keiqi-line bg-keiqi-night-3 px-5 py-3 text-sm text-keiqi-gold-soft">
-        凯奇 AI 设计顾问 · 在线演示
+      <div className="flex items-center gap-3 border-b border-keiqi-line bg-keiqi-night-3 px-5 py-3 text-sm text-keiqi-gold-soft">
+        <Mascot size={32} className="shrink-0" />
+        小匠 · 凯奇AI设计顾问
+        <span className="ml-auto flex items-center gap-1.5 text-[11px] text-keiqi-cream/40">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+          在线
+        </span>
       </div>
 
       {/* 对话区 */}
@@ -71,6 +77,9 @@ export function AiChat() {
                 m.role === "user" ? "justify-end" : "justify-start"
               )}
             >
+              {m.role === "bot" && (
+                <Mascot size={28} className="mr-2 mt-1 shrink-0 self-start" />
+              )}
               <div
                 className={cn(
                   "max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-7",

@@ -50,7 +50,7 @@ export default function Page() {
         en="Japanese Living™"
         title="日本整体厨卫™"
         subtitle="以日本住宅设计逻辑，重构居住效率。从厨卫到收纳、家政与适老化，让每一寸空间都被认真对待。"
-        bgImage="https://images.pexels.com/photos/35680939/pexels-photo-35680939.jpeg"
+        bgImage="/images/pexels/35680939.jpg"
       />
 
       <section className="bg-white px-6 py-24">

@@ -5,7 +5,7 @@ const STANDARDS = ["水电系统", "防水系统", "木作系统", "涂装系统
 
 /* 工艺氛围图（Pexels 免费商用 · 手工刨刀木工特写，上线替换为真实工地照片） */
 const CRAFT_IMAGE =
-  "https://images.pexels.com/photos/37358115/pexels-photo-37358115.jpeg";
+  "/images/pexels/37358115.jpg";
 
 export function Craftsmanship() {
   return (

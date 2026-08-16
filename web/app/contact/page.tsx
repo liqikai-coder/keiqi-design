@@ -22,7 +22,7 @@ export default function Page() {
         en="Contact"
         title="预约咨询"
         subtitle="预约一次专属空间设计咨询，或留下联系方式，凯奇顾问将在 1 个工作日内与您联系。"
-        bgImage="https://images.pexels.com/photos/7045918/pexels-photo-7045918.jpeg"
+        bgImage="/images/pexels/7045918.jpg"
       />
 
       <section className="bg-keiqi-night px-6 py-20">

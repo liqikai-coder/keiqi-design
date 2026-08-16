@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import { Cormorant_Garamond, Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -9,6 +9,14 @@ const display = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const art = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["700", "800", "900"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -51,7 +59,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="zh-CN" className={`${display.variable} ${body.variable}`}>
+    <html
+      lang="zh-CN"
+      className={`${display.variable} ${body.variable} ${art.variable}`}
+    >
       <body className="flex min-h-screen flex-col bg-keiqi-cream text-keiqi-ink">
         <SiteHeader />
         <main className="flex-1">{children}</main>
