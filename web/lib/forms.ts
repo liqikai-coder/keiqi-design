@@ -1,13 +1,12 @@
 // 免费表单服务：Web3Forms（无需后端，提交后线索直接发到您邮箱）
 // -----------------------------------------------------------------------------
-// 获取免费 key（1 分钟，只要邮箱，不用密码）：
-//   打开 https://web3forms.com → 输入您的邮箱 → 复制 access_key
-// 然后在 Vercel 项目 Settings → Environment Variables 添加一条：
-//   名称：NEXT_PUBLIC_WEB3FORMS_KEY   值：您复制的 key
-// 保存后重新部署（Redeploy）即生效。
-// 未配置 key 时，表单仍会写入本地「需求汇总」（演示态），不会报错。
+// access_key 已内置在下方（Web3Forms 的 key 可公开，放在前端代码里安全）。
+// 如需更换邮箱 / key，可在 Vercel 项目 Settings → Environment Variables 添加
+//   NEXT_PUBLIC_WEB3FORMS_KEY 覆盖（不配则自动使用内置值）。
+// 未配置环境变量时，表单使用内置 key 直接发信，不会报错。
 
-export const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "";
+export const WEB3FORMS_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "11ccbb8f-c9de-434a-9ae2-fd70e425a047";
 
 export interface LeadInput {
   name: string;
