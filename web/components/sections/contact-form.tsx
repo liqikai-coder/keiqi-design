@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { saveSubmission } from "@/lib/submissions";
+import { submitLead } from "@/lib/forms";
 
 const PROJECT_TYPES = ["别墅", "大平层", "顶层复式", "私人会所", "其他"];
 
@@ -14,13 +15,15 @@ export function ContactForm() {
   function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    saveSubmission({
-      source: "contact",
+    const payload = {
+      source: "contact" as const,
       name: String(data.get("name") || ""),
       phone: String(data.get("phone") || ""),
       projectType: type,
       message: String(data.get("message") || ""),
-    });
+    };
+    saveSubmission(payload);
+    submitLead(payload);
     setSent(true);
   }
 
@@ -32,7 +35,7 @@ export function ContactForm() {
         </div>
         <h3 className="font-display text-2xl text-keiqi-cream">已收到您的预约</h3>
         <p className="mt-3 text-sm text-keiqi-cream/55">
-          凯奇顾问将在 1 个工作日内与您联系。您的需求已记录，可在「需求汇总」查看。
+          凯奇顾问将在 1 个工作日内与您电话联系。您的需求已提交至后台。
         </p>
         <div className="mt-6 flex items-center justify-center gap-4 text-sm">
           <button

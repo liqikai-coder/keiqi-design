@@ -4,6 +4,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Send } from "lucide-react";
 import { saveSubmission } from "@/lib/submissions";
+import { submitLead as pushLead } from "@/lib/forms";
 import { Mascot } from "@/components/brand/mascot";
 
 interface Msg {
@@ -46,12 +47,14 @@ export function AiChat() {
   function submitLead(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const lastUser = [...messages].reverse().find((m) => m.role === "user");
-    saveSubmission({
-      source: "ai",
+    const payload = {
+      source: "ai" as const,
       name: lead.name,
       phone: lead.phone,
       message: lastUser?.text || "AI 设计顾问对话留资",
-    });
+    };
+    saveSubmission(payload);
+    pushLead(payload);
     setLeadSent(true);
   }
 
